@@ -1,8 +1,12 @@
-
+import Container from "./components/container/Container";
+import NavBar from "./components/navbar/Navbar";
 
 function App() {
   return (
-    <div>oi123</div>
+    <Container>
+      <NavBar />
+    </Container>
+      
   );
 }
 
