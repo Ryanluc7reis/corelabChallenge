@@ -1,5 +1,5 @@
 {
-  "name": "corelab-challenge",
+  "name": "no",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,5 +34,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "^3.0.0"
   }
 }
