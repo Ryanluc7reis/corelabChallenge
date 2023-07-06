@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Logo from '../../logo/Logo.jsx'
+import Logo from '../../layout/logo/Logo.jsx'
 
 
 const StyledNav = styled.div`
@@ -31,7 +31,7 @@ const StyledNav = styled.div`
 }
 
 `
-const StyledVector = styled.img`
+const StyledClose = styled.img`
   background-image: url('${props => props.image}');
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,13 +46,13 @@ function NavBar ({ children, image }) {
     <StyledNav >
       { children }
       <Logo />
-      <StyledVector image={image}/>
+      <StyledClose image={image}/>
     </StyledNav>
 
   )
   
 } 
 NavBar.defaultProps = {
-  image:'/Vector.png'
+  image:'/close.png'
 }
 export default NavBar

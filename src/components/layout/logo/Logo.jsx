@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import InputSearchNote from "../form/inputSearchNote/InputSearchNote.jsx"
+import InputSearchNote from "../../form/inputs/InputSearchNote.jsx"
 
 const StyledFlex = styled.div`
   display: flex;

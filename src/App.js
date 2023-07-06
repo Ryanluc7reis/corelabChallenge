@@ -7,7 +7,7 @@ function App() {
     <>
       <NavBar />
       <Container>
-        <CreateNote>oi</CreateNote>
+        <CreateNote/>
       </Container>
     </>
   
