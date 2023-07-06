@@ -15,7 +15,16 @@ const StyledInput = styled.input`
   background-position: right 1em bottom 5px;
   padding: 0 20px;
   margin-left: 10px;
-
+  @media (max-width: 768px){
+    width: 400px;
+    position: relative;
+}
+@media (max-width: 576px){
+    width: 300px;
+    padding: 20px;
+    align-items: center;
+    background-position: right 1em bottom 10px;
+}
 
 `
 

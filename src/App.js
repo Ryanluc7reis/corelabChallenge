@@ -1,11 +1,16 @@
 import Container from "./components/container/Container";
-import NavBar from "./components/navbar/Navbar";
+import NavBar from "./components/layout/navbar/Navbar";
+import CreateNote from "./components/cards/CreateNote";
 
 function App() {
   return (
-    <Container>
+    <>
       <NavBar />
-    </Container>
+      <Container>
+        <CreateNote>oi</CreateNote>
+      </Container>
+    </>
+  
       
   );
 }

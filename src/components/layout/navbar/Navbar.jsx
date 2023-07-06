@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import Logo from '../logo/Logo.jsx'
+import Logo from '../../logo/Logo.jsx'
 
 
 const StyledNav = styled.div`
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +11,25 @@ const StyledNav = styled.div`
   width: 100%;
   background-color: ${props => props.theme.white};
   gap: 24px;
+  @media (min-width: 1440px){
+    width: 100%;
+}
+@media (max-width: 535px){
+    width: 105%;
+}
+@media (max-width: 482px){
+    width: 115%;
+}
+@media (max-width: 435px){
+    width: 130%;
+}
+@media (max-width: 412px){
+    width: 510px;
+}
+@media (max-width: 358px){
+    width: 527px;
+}
+
 `
 const StyledVector = styled.img`
   background-image: url('${props => props.image}');
@@ -20,7 +40,8 @@ const StyledVector = styled.img`
 `
 
 
-const NavBar = ({ children, image }) => {
+
+function NavBar ({ children, image }) {
   return(
     <StyledNav >
       { children }
