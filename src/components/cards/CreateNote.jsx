@@ -14,9 +14,16 @@ const NoteContainer = styled.div`
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.25);
 
 
-  @media (max-width: 500px) {
-    padding: 20px;
+  @media (max-width: 768px) {
+    width: 389.74078369140625px;
+  height: 103.364501953125px;
+  top: 82.0592041015625px;
+  left: 92.96435546875px;
+  border-radius: 25px;
+  border: 1px;
+
   }
+
 `
 
 const TextContainer = styled.div`

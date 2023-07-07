@@ -4,6 +4,18 @@ import TitleNote from '../layout/titlenote/TitleNote'
 import H3 from '../typography/H3'
 import MenuNotes from '../navigations/MenuNotes'
 
+const StyledContainer = styled.div`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media (max-width:350px) {
+      margin-left: 40px;
+    }
+    @media (max-width:430px) {
+      margin-left: 50px;
+    }
+`
+
 const StyledNote = styled.div`
   width: 390px;
   height: 437.5882568359375px;
@@ -21,36 +33,41 @@ const StyledNote = styled.div`
 const StyledFlex = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin: 18px 60px;
+  margin: 18px 65px;
   gap: 23px;
+  @media (max-width: 768px){
+    justify-content: center;
+  }
+    
 `
- export default function Notes({ image }){
+ export default function Notes(){
     return(
       <>
-
-        <CreateNote />
-        <StyledFlex>          
-          <StyledNote>
-              <TitleNote />
-              <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
-              <MenuNotes />
-          </StyledNote>
-          <StyledNote>
-              <TitleNote />
-              <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
-              <MenuNotes />
-          </StyledNote>
-          <StyledNote>
-              <TitleNote />
-              <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
-              <MenuNotes />
-          </StyledNote>
-          <StyledNote>
-              <TitleNote />
-              <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
-              <MenuNotes />
-          </StyledNote>  
-        </StyledFlex>
+        <StyledContainer>
+          <CreateNote />
+          <StyledFlex>          
+            <StyledNote>
+                <TitleNote />
+                <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
+                <MenuNotes />
+            </StyledNote>
+            <StyledNote>
+                <TitleNote />
+                <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
+                <MenuNotes />
+            </StyledNote>
+            <StyledNote>
+                <TitleNote />
+                <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
+                <MenuNotes />
+            </StyledNote>
+            <StyledNote>
+                <TitleNote />
+                <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
+                <MenuNotes />
+            </StyledNote>  
+          </StyledFlex>
+        </StyledContainer>
         
       </>
     )     

@@ -6,6 +6,5 @@ const Textarea = styled.textarea`
   border: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  
 `
 export default Textarea

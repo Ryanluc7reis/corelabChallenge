@@ -11,9 +11,7 @@ const StyledNav = styled.div`
   width: 100%;
   background-color: ${props => props.theme.white};
   gap: 24px;
-  @media (min-width: 1440px){
-    width: 100%;
-}
+
 @media (max-width: 535px){
     width: 105%;
 }
@@ -21,7 +19,7 @@ const StyledNav = styled.div`
     width: 115%;
 }
 @media (max-width: 435px){
-    width: 130%;
+    width: 120%;
 }
 @media (max-width: 412px){
     width: 510px;

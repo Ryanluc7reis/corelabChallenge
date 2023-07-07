@@ -25,6 +25,12 @@ const StyledInput = styled.input`
     align-items: center;
     background-position: right 1em bottom 10px;
 }
+@media (max-width: 428px){
+    width: 250px;
+    padding: 20px;
+    align-items: center;
+    background-position: right 1em bottom 10px;
+}
 
 `
 
