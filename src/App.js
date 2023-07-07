@@ -1,13 +1,13 @@
 import Container from "./components/container/Container";
 import NavBar from "./components/layout/navbar/Navbar";
-import CreateNote from "./components/cards/CreateNote";
+import Notes from "./components/cards/Notes"
 
 function App() {
   return (
     <>
       <NavBar />
-      <Container>
-        <CreateNote/>
+      <Container>    
+        <Notes />
       </Container>
     </>
   

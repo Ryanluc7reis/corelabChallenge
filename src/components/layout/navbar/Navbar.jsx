@@ -41,7 +41,7 @@ const StyledClose = styled.img`
 
 
 
-function NavBar ({ children, image }) {
+export default function NavBar ({ children, image }) {
   return(
     <StyledNav >
       { children }
@@ -55,4 +55,3 @@ function NavBar ({ children, image }) {
 NavBar.defaultProps = {
   image:'/close.png'
 }
-export default NavBar

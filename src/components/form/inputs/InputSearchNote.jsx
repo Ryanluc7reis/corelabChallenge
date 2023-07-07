@@ -28,7 +28,7 @@ const StyledInput = styled.input`
 
 `
 
- function InputSearchNote( { image , ...props } ) {
+export default function InputSearchNote( { image , ...props } ) {
   return (
     <StyledInput image={image} placeholder='Pesquisar notas'{...props} />
   )
@@ -36,4 +36,3 @@ const StyledInput = styled.input`
 InputSearchNote.defaultProps = {
   image:'/search.png'
 }
-export default InputSearchNote

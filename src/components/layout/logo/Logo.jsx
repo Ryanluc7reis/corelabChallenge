@@ -23,7 +23,7 @@ const StyledCoreNotes = styled.h3`
   text-align: left;
   color: ${(props) => props.theme.logo};
 `
-function Logo({ children, image }) {
+export default function Logo({ children, image }) {
   return (
     <StyledFlex>
       {children} 
@@ -37,4 +37,3 @@ function Logo({ children, image }) {
 Logo.defaultProps ={
   image:'/logo.png'
 }
-export default Logo
