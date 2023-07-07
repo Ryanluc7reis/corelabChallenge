@@ -1,3 +1,4 @@
+
 import styled from 'styled-components'
 import CreateNote from './CreateNote'
 import TitleNote from '../layout/titlenote/TitleNote'
@@ -27,7 +28,7 @@ const StyledNote = styled.div`
   background-image: url('${props => props.image}');
   background-repeat: no-repeat;
   padding: 15px;
-  background-color: #06f37c;
+  background-color: #04db6f;
 
 `
 const StyledFlex = styled.div`
@@ -41,12 +42,14 @@ const StyledFlex = styled.div`
     
 `
  export default function Notes(){
+
+
     return(
       <>
         <StyledContainer>
           <CreateNote />
           <StyledFlex>          
-            <StyledNote>
+            <StyledNote >
                 <TitleNote />
                 <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
                 <MenuNotes />

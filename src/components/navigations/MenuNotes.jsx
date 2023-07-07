@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { useState, useEffect, useRef } from "react"
+import ColorPicker from "../form/inputs/ColorPicker"
 
 const StyledFlex = styled.div`
   display: flex;
@@ -52,12 +54,38 @@ const StyledDiv = styled.div`
 `
 
 export default function MenuNotes({ children, image, image2, image3, imageTinta }) {
+ const [show, setShow] = useState(false)
+ const menuRef = useRef(null)
+ const [backgroundColor, setBackgroundColor] = useState('transparent');
+
+ const handleclick = () => {
+   setBackgroundColor('red');
+ };
+  useEffect(() => {
+    const handleClickOutSide = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)){
+        setShow(false)
+      }
+    }
+    document.addEventListener('click',handleClickOutSide,true)
+
+    return () => {
+      document.removeEventListener('click', handleClickOutSide,true)
+    }
+  },[menuRef])
+  useEffect(()=> {
+    const button = document.getElementById('color');
+    button?.addEventListener('click', handleclick())
+  },[])
+
+
   return(
     <StyledFlex>
       {children}
       <StyledDiv>
         <StyledLapis image3={image3} />
-        <StyledPoteTinta image2={image2}>
+        <StyledPoteTinta id='color' onClick={() => setShow(!show) } ref={menuRef} image2={image2}>
+           <ColorPicker show={show}   /> 
           <Tinta imageTinta={imageTinta}/>
         </StyledPoteTinta>
       </StyledDiv>
