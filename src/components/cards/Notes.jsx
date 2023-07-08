@@ -154,18 +154,30 @@ const StyledFlexColorPicker = styled.div`
                       <StyledPoteTinta onClick={() => setShow(!show) } ref={menuRef} imagePoteTinta={imagePoteTinta}>
                         <StyledFlexColorPicker>
                             <StyledColorPicker show={show} >
-                              <ColorPicker style= {{backgroundColor:"#BAE2FF "}}color="#BAE2FF" onClick={handleColorClick} />
-                              <ColorPicker style= {{backgroundColor:"#B9FFDD "}}color="#B9FFDD" onClick={handleColorClick} />
-                              <ColorPicker style= {{backgroundColor:"#FFE8AC"}}color="#FFE8AC" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#FFCAB9"}}color="#FFCAB9" onClick={handleColorClick} />
-                              <ColorPicker style= {{backgroundColor:"#F99494"}}color="#F99494" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#9DD6FF"}}color="#9DD6FF" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#ECA1FF"}}color="#ECA1FF" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#DAFF8B"}}color="#DAFF8B" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#FFA285"}}color="#FFA285" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#CDCDCD"}}color="#CDCDCD" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#979797"}}color="#979797" onClick={handleColorClick} /> 
-                              <ColorPicker style= {{backgroundColor:"#A99A7C"}}color="#A99A7C" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#BAE2FF "}}color="#BAE2FF" onClick={handleColorClick} />
+                              <ColorPicker 
+                              style= {{backgroundColor:"#B9FFDD "}}color="#B9FFDD" onClick={handleColorClick} />
+                              <ColorPicker 
+                              style= {{backgroundColor:"#FFE8AC"}}color="#FFE8AC" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#FFCAB9"}}color="#FFCAB9" onClick={handleColorClick} />
+                              <ColorPicker 
+                              style= {{backgroundColor:"#F99494"}}color="#F99494" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#9DD6FF"}}color="#9DD6FF" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#ECA1FF"}}color="#ECA1FF" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#DAFF8B"}}color="#DAFF8B" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#FFA285"}}color="#FFA285" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#CDCDCD"}}color="#CDCDCD" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#979797"}}color="#979797" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#A99A7C"}}color="#A99A7C" onClick={handleColorClick} /> 
 
                             </StyledColorPicker>
                         </StyledFlexColorPicker>                       
@@ -175,10 +187,47 @@ const StyledFlexColorPicker = styled.div`
                   <StyledClose imageExcluir={imageExcluir} />
                 </StyledFlexMenuNote>
             </StyledNote>
-            <StyledNote>
+            <StyledNote style={appStyle} >
                 <TitleNote />
                 <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
-                <MenuNotes />
+                <StyledFlexMenuNote >
+                  <MenuNotes>
+                    <StyledLapis imageLapis={imageLapis} />
+                      <StyledPoteTinta onClick={() => setShow(!show) } ref={menuRef} imagePoteTinta={imagePoteTinta}>
+                        <StyledFlexColorPicker>
+                            <StyledColorPicker show={show} >
+                              <ColorPicker 
+                              style= {{backgroundColor:"#BAE2FF "}}color="#BAE2FF" onClick={handleColorClick} />
+                              <ColorPicker 
+                              style= {{backgroundColor:"#B9FFDD "}}color="#B9FFDD" onClick={handleColorClick} />
+                              <ColorPicker 
+                              style= {{backgroundColor:"#FFE8AC"}}color="#FFE8AC" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#FFCAB9"}}color="#FFCAB9" onClick={handleColorClick} />
+                              <ColorPicker 
+                              style= {{backgroundColor:"#F99494"}}color="#F99494" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#9DD6FF"}}color="#9DD6FF" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#ECA1FF"}}color="#ECA1FF" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#DAFF8B"}}color="#DAFF8B" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#FFA285"}}color="#FFA285" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#CDCDCD"}}color="#CDCDCD" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#979797"}}color="#979797" onClick={handleColorClick} /> 
+                              <ColorPicker 
+                              style= {{backgroundColor:"#A99A7C"}}color="#A99A7C" onClick={handleColorClick} /> 
+
+                            </StyledColorPicker>
+                        </StyledFlexColorPicker>                       
+                        <Tinta imageTinta={imageTinta}/>
+                      </StyledPoteTinta>
+                  </MenuNotes>
+                  <StyledClose imageExcluir={imageExcluir} />
+                </StyledFlexMenuNote>
             </StyledNote>
             <StyledNote>
                 <TitleNote />
