@@ -8,7 +8,7 @@ const StyledTitle = styled.div`
 const Title = styled.div`
   font-size: 14px;
   font-weight: 700;
-  margin: 15px 20px;
+  margin: 9px 20px;
 
 `
 const StyledLinha = styled.div`

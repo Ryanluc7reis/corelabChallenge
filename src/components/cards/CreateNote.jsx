@@ -5,7 +5,7 @@ import TitleNote from '../layout/titlenote/TitleNote'
 const NoteContainer = styled.div`
   background-color: ${props => props.theme.white};
   width: 530.166259765625px;
-  height: 110.364501953125px;
+  height: 115.364501953125px;
   top: 81.8118896484375px;
   left: 443.647705078125px;
   border-radius: 3px;
