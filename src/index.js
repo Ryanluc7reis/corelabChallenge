@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import {createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from './theme';
+import FavoritesProvider from './contexts/Favorites';
 
 const GlobalStyle = createGlobalStyle`
   html,body{
@@ -20,12 +21,14 @@ const GlobalStyle = createGlobalStyle`
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider theme={theme}>
-    <React.StrictMode>
+  <FavoritesProvider>
+    <ThemeProvider theme={theme}>
+      <React.StrictMode>
       <GlobalStyle/>
       <App />
-    </React.StrictMode>
-  </ThemeProvider>
+      </React.StrictMode>
+    </ThemeProvider>
+  </FavoritesProvider>
 );
 
 

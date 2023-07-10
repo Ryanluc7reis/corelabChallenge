@@ -1,10 +1,14 @@
+import { useState, useEffect, useRef } from 'react'
+import { useFavoriteContext } from '../../contexts/Favorites'
 
 import styled from 'styled-components'
 import CreateNote from './CreateNote'
 import TitleNote from '../layout/titlenote/TitleNote'
 import H3 from '../typography/H3'
-import { useState, useEffect, useRef } from 'react'
+import H4 from '../typography/H4'
 import ColorPicker from '../form/inputs/ColorPicker'
+import NoteList from '../notelist/NoteList'
+
 
 const StyledContainer = styled.div`
     display: flex;
@@ -108,13 +112,23 @@ const StyledColorPicker = styled.div`
 
     }
 `
+
 const StyledFlexColorPicker = styled.div`
     width: 100%;
     height: 100%;
   `
- export default function Notes({ children, imageTinta, imageLapis, imagePoteTinta, imageExcluir  }){
+  const DivFavoritos = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+  `
+ export default function Notes({ children, imageTinta, imageLapis, imagePoteTinta, imageExcluir, id  }){
+  
+ 
+
   const [show, setShow] = useState(false)
- const menuRef = useRef(null)
+  const menuRef = useRef(null)
 
   useEffect(() => {
     const handleClickOutSide = (event) => {
@@ -138,12 +152,17 @@ const StyledFlexColorPicker = styled.div`
   const appStyle = {
   backgroundColor: selectedColor,
   }
+  const { favorite } = useFavoriteContext()
 
     return(
       <>
         <StyledContainer>
           {children}
           <CreateNote />
+          <DivFavoritos>
+            <H4>Favoritas</H4>
+            {  <NoteList notes={favorite} emptyHeading="🤔 Sem favoritos 🤔" /> }
+          </DivFavoritos>
           <StyledFlex>          
             <StyledNote style={appStyle} >
                 <TitleNote />
@@ -188,7 +207,7 @@ const StyledFlexColorPicker = styled.div`
                 </StyledFlexMenuNote>
             </StyledNote>
             <StyledNote style={appStyle} >
-                <TitleNote />
+                <TitleNote/>
                 <H3>Clique ou arraste o arquivo para esta área para fazer o upload</H3>
                 <StyledFlexMenuNote >
                   <MenuNotes>
@@ -249,5 +268,7 @@ const StyledFlexColorPicker = styled.div`
     imageExcluir:'/close.png',
     imagePoteTinta:'/potetinta.png',
     imageLapis:'/lapis.png',
-    imageTinta: '/tinta.png'
+    imageTinta: '/tinta.png',
+    imageTintaStar:'/tintastar.png'
   }
+

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Textarea from '../form/inputs/TextArea'
 import TitleNote from '../layout/titlenote/TitleNote'
 
+
 const NoteContainer = styled.div`
   background-color: ${props => props.theme.white};
   width: 530.166259765625px;
@@ -31,7 +32,8 @@ const TextContainer = styled.div`
   margin: 15px 15px;
 `
 
-export default function CreateNote({ children, image }) {
+
+export default function CreateNote({ children, imageTintaStar }) {
     return(
       <NoteContainer >
         {children}
@@ -41,4 +43,7 @@ export default function CreateNote({ children, image }) {
         </TextContainer>
       </NoteContainer>
     )
+  }
+  CreateNote.defaultProps = {
+    imageTintaStar:'/tintastar.png'
   }
